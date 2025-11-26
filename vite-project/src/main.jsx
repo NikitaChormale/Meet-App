@@ -5,6 +5,9 @@ import imgmicon from "./mic-onn.png";
 import imgmicoff from "./moc-off.png";
 import img1 from "./flower.png";
 import img2 from "./img2.png";
+import Button, {ConfirmButton,DisableButton} from "./button";
+import Navbar from './navbar';
+
 const root=createRoot(document.getElementById('root'));
 const Hello=({user, micstate,photo}) => {
     const avtarColors=["#dc2684ff",
@@ -31,6 +34,8 @@ const Hello=({user, micstate,photo}) => {
       src={micstate==="on"? imgmicon: imgmicoff}
       className='micstate' />
       </div>
+       <Button title="message"/>
+      <Navbar Descrition="🏆"/>
         </div>
          </>
     );
@@ -39,6 +44,11 @@ root.render(
     <>
 <div>
     <h1>component and props</h1>
+
+     <Button title="Click Me"/>  
+    <DisableButton title="Can't Click Me"/>
+    <ConfirmButton title="Click e ,I'm Important"/>
+
     <Hello  user="Nikita" micstate="off" 
     />
     <Hello  user="Komal" micstate="off"
